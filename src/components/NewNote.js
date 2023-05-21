@@ -9,8 +9,7 @@ const NewNote = (props) => {
     event.preventDefault()
     const content = event.target.note.value
     event.target.note.value = ''
-    const newNote = await noteService.create(content)
-    dispatch(createNote(newNote))
+    dispatch(createNote(content))
   }
 
   return (
